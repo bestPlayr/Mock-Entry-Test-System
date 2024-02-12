@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include<ctype.h>
+void Result(int etotal,int mtotal, int ptotal,int total);
 struct details{
  char name[100];
  int age;
@@ -22,101 +23,6 @@ void admitcard(struct details s1){
 	printf("\n*****************************************"); 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 }
-void Result(int etotal,int mtotal, int ptotal,int total){
-
-	printf("***********************************\n\n\t\t\t\t::::RESULT::::\n");	
-	total=total*10;   // Each MCQ is of 10 marks
-	printf("\nTotal number obtained: %d\nCorrect number of questions in English are: %d\nCorrect number of questions in Mathematics are: %d\nCorrect number of questions in Physics are: %d",total,etotal,mtotal,ptotal);
-    printf("\n\t****** REMARKS *******\n");
-    printf("\n\t****** ENGLISH *******\n");
-if(etotal==5){
-	printf("You attempted all questions correctly\n");
-	printf("EXCELLENT\n");
-}
-else if(etotal==4){
-	printf("You attempted 4 questions correctly\n");
-	printf("GOOD\n");
-	}
-else if(etotal==3){
-		printf("You attempted 3 questions correctly\n");
-	
-		printf("AVERAGE\n");
-}
-else if (etotal==2){
-	printf("You attempted 2 questions correctly\n");
-	printf("NEED IMPROVEMENT IN ENGLISH\n");
-	
-}
-else if (etotal==1){
-	printf("You attempted 1 question correctly\n");
-	printf("NEED IMPROVEMENT IN ENGLISH\n");
-}
-else if(etotal==0){
-		printf("You attempted 0 questions\n");
-	printf("\t\tPOOR\n");
-}
- printf("\n\t****** MATHS *******\n");
- if(mtotal==5){
-	printf("You attempted all questions correctly\n");
-	printf("\tEXCELLENT\n");
-
-}
-else if(mtotal==4){
-	printf("You attempted 4 questions correctly\n");
-	printf("GOOD\n");
-}
-else if(mtotal==3){
-	printf("You attempted 3 questions correctly\n");
-	printf("AVERAGE\n");
-}
-else if(mtotal==2){
-	printf("You attempted 2 questions correctly\n");
-	printf("NEED IMPROVEMENT IN MATHS\n");
-}
-else if(mtotal==1){
-	printf("You attempted 1 question correctly\n");
-	printf("NEED IMPROVEMENT IN MATHS\n");
-}
-else if(mtotal==0){
-		printf("You attempted 0 questions\n");
-	printf("\t\tPOOR\n");
-}
- printf("\n\t****** PHYSICS *******\n");
- if(ptotal==5){
-	printf("You attempted all questions correctly\n");
-	printf("EXCELLENT\n");
-}
-else if(ptotal==4){
-	printf("You attempted 4 questions correctly\n");
-	printf("GOOD\n");
-}
-else if(ptotal==3){
-	printf("You attempted 3 questions correctly\n");
-	printf("AVERAGE\n");
-}
-else if(ptotal==2){
-	printf("You attempted 2 questions correctly\n");
-	printf("NEED IMPROVEMENT IN PHYSICS\n");
-}
-	else if(ptotal==1){
-	printf("You attempted 1 question correctly\n");
-	printf("NEED IMPROVEMENT IN PHYSICS\n");
-}
-else if(ptotal==0){
-	printf("You attempted 0 questions\n");
-	printf("\t\tPOOR\n");
-	
-}
- if(total<70){
- 	printf("\nOVERALL\n");
-	printf("\n\tFAIL");
-}
-else if(total>=70){
-	printf("\nOVERALL\n");
-	printf("\n\tPASSED");
-}
-}
-
 int main(){
 	int total=0;
 	int etotal=0;
@@ -283,7 +189,100 @@ else{
 	return 0;
 }
 }
+void Result(int etotal,int mtotal, int ptotal,int total){
 
+	printf("***********************************\n\n\t\t\t\t::::RESULT::::\n");	
+	total=total*10;   // Each MCQ is of 10 marks
+	printf("\nTotal number obtained: %d\nCorrect number of questions in English are: %d\nCorrect number of questions in Mathematics are: %d\nCorrect number of questions in Physics are: %d",total,etotal,mtotal,ptotal);
+    printf("\n\t****** REMARKS *******\n");
+    printf("\n\t****** ENGLISH *******\n");
+if(etotal==5){
+	printf("You attempted all questions correctly\n");
+	printf("EXCELLENT\n");
+}
+else if(etotal==4){
+	printf("You attempted 4 questions correctly\n");
+	printf("GOOD\n");
+	}
+else if(etotal==3){
+		printf("You attempted 3 questions correctly\n");
+	
+		printf("AVERAGE\n");
+}
+else if (etotal==2){
+	printf("You attempted 2 questions correctly\n");
+	printf("NEED IMPROVEMENT IN ENGLISH\n");
+	
+}
+else if (etotal==1){
+	printf("You attempted 1 question correctly\n");
+	printf("NEED IMPROVEMENT IN ENGLISH\n");
+}
+else if(etotal==0){
+		printf("You attempted 0 questions\n");
+	printf("\t\tPOOR\n");
+}
+ printf("\n\t****** MATHS *******\n");
+ if(mtotal==5){
+	printf("You attempted all questions correctly\n");
+	printf("\tEXCELLENT\n");
+
+}
+else if(mtotal==4){
+	printf("You attempted 4 questions correctly\n");
+	printf("GOOD\n");
+}
+else if(mtotal==3){
+	printf("You attempted 3 questions correctly\n");
+	printf("AVERAGE\n");
+}
+else if(mtotal==2){
+	printf("You attempted 2 questions correctly\n");
+	printf("NEED IMPROVEMENT IN MATHS\n");
+}
+else if(mtotal==1){
+	printf("You attempted 1 question correctly\n");
+	printf("NEED IMPROVEMENT IN MATHS\n");
+}
+else if(mtotal==0){
+		printf("You attempted 0 questions\n");
+	printf("\t\tPOOR\n");
+}
+ printf("\n\t****** PHYSICS *******\n");
+ if(ptotal==5){
+	printf("You attempted all questions correctly\n");
+	printf("EXCELLENT\n");
+}
+else if(ptotal==4){
+	printf("You attempted 4 questions correctly\n");
+	printf("GOOD\n");
+}
+else if(ptotal==3){
+	printf("You attempted 3 questions correctly\n");
+	printf("AVERAGE\n");
+}
+else if(ptotal==2){
+	printf("You attempted 2 questions correctly\n");
+	printf("NEED IMPROVEMENT IN PHYSICS\n");
+}
+	else if(ptotal==1){
+	printf("You attempted 1 question correctly\n");
+	printf("NEED IMPROVEMENT IN PHYSICS\n");
+}
+else if(ptotal==0){
+	printf("You attempted 0 questions\n");
+	printf("\t\tPOOR\n");
+	
+}
+ if(total<70){
+ 	printf("\nOVERALL\n");
+	printf("\n\tFAIL");
+}
+else if(total>=70){
+	printf("\nOVERALL\n");
+	printf("\n\tPASSED");
+}
+}
 
 }
 
